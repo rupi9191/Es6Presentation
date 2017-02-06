@@ -1,0 +1,416 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Intro To Node | Node Boston Meetup 3/27/12 | by Le Zhang @le_isms</title>
+
+    <meta name="description" content="IntroToNode Presentation for Node Boston Meetup 3/27/12" />
+    <meta name="author" content="Le Zhang" />
+
+    <link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+    <link href="stylesheets/introtonode.css" rel="stylesheet" />
+    <link href="stylesheets/bootstrap.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id="title" class="step special" data-x="-500" data-y="50">
+        <h1 style="font-size: 80px;">Intro to ES6</h1>
+        <h2>By RupeshB</h2>
+    </div>
+
+    <div id="agenda" class="step special" data-x="500" data-y="50" style="f" >
+        <h2 style="font-size:50px;ont-weight: bold;">Agenda:</h2>
+        <h2 style="font-size:50px;font-weight:bold">What is ES6?</h2>
+        <h2 style="font-size:50px;font-weight:bold">Some features of ES6</h2>
+        <h2 style="font-size:50px;font-weight:bold">Usage of ES6</h2>
+    </div>
+
+    <div class="cube">
+        <div class="topFace step" data-x="0" data-y="-125" data-z="-1005" data-rotate-x="60" data-rotate-y="0" data-rotate-z="45" data-scale="0.5">
+                <h1>Just what is ES6?</h1>
+                <p class="paragraph"><strong>ES6/ECMAScript6/ES2015</strong> <br/>
+				  is a trademarked scripting-language specification standardized by ECMA International.It was based on JavaScript, which now tracks ECMAScript. It is commonly used
+				   for client-side scripting on the World Wide Web and is increasingly being used for
+				   writing server applications and services using Node.js. Other implementations of ECMAScript include
+				   JScript and ActionScript
+				</p>
+
+        </div>
+        <div class="leftFace step" data-x="-125" data-y="90" data-z="-985" data-rotate-x="-30" data-rotate-y="-45" data-rotate-z="0" data-scale="0.5">
+                <h1>Some features of ES6:</h1>
+                <ul style="font-size:30px;float:left">
+                    <li>Default Parameters</li>
+                    <li>Template Literals</li>
+                    <li>Multiline Strings</li>
+					          <li>Arrow Functions</li>
+                    <li>Scoping</li>
+                    <li>Map / Set</li>
+
+                </ul>
+        				<ul style="font-size:30px;float:right">
+  				            <li>Classes</li>
+                      <li>Modules</li>
+                      <li>Promises</li>
+  					          <li>Generators</li>
+                      <li>Destructing Assignment</li>
+        				</ul>
+        </div>
+        <div class="rightFace step" data-x="125" data-y="90" data-z="-985" data-rotate-x="-30" data-rotate-y="45" data-rotate-z="0" data-scale="0.5">
+          <div class="container">
+            <h1>Default Parameters</h1>
+            <div class="row">
+              <div class="col-md-6">
+                <p class="paragraph">Function parameters will have default values</p>
+                <h1>ES5</h1>
+                <pre>
+                  <code>
+                    function(x,y) {
+                      var a = x || 1;
+                      var b = y || 1;
+                      return a+b;
+                    }
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="backRightFace step" data-x="125" data-y="-35" data-z="-1200" data-rotate-x="-30" data-rotate-y="135" data-rotate-z="0" data-scale="0.5">
+          <div class="container">
+            <h1>Default Parameters</h1>
+            <div class="row">
+              <div class="col-md-6">
+                <h1>ES6</h1>
+                <pre>
+                  <code>
+                    function(x=1,y=1) {
+                      return x+y;
+                    }
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="backLeftFace step" data-x="-125" data-y="-35" data-z="-1200" data-rotate-x="-30" data-rotate-y="225" data-rotate-z="0" data-scale="0.5">
+          <div class="container">
+            <h1>String Literals</h1>
+            <div class="row">
+              <div class="col-md-6">
+                <p class="paragraph">Same as String interpolation.</p>
+                <h1>es5</h1>
+                <pre>
+                  <code>
+                    var first = "Rupesh";
+                    var last = "B";
+                    var text = "My Name is" + " "+ first + " " + last;
+                  </code>
+                </pre>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="bottomFace step" data-x="0" data-y="180" data-z="-1180" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="0.5">
+          <div class="container">
+            <h1>String Literals</h1>
+            <div class="row">
+              <div class="col-md-6">
+                <h1>es6</h1>
+                <pre>
+                  <code>
+                    var first = "Rupesh";
+                    var last = "B";
+                    var text = `My Name is ${first} ${last}`;
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+        </div>
+    </div>
+	    <div class="cube">
+        <div class="topFace step" data-x="600" data-y="-125" data-z="-1005" data-rotate-x="60" data-rotate-y="0" data-rotate-z="45" data-scale="0.5">
+          <h1>Multiline String</h1>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="paragraph">In ES6, multiline strings are made possible</p>
+                <h1>es5</h1>
+                <pre>
+                  <code>
+                    <p style="margin-left:-170px">
+                      var paragraph = "My name is Rupesh"
+                        + "I am currently working at Rakuten"
+                        + "My expertise are mobile application development and front end engineering."
+                    </p>
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="leftFace step" data-x="475" data-y="90" data-z="-985" data-rotate-x="-30" data-rotate-y="-45" data-rotate-z="0" data-scale="0.5">
+            <div class="container">
+              <h1>Multiline String</h1>
+              <div class="row">
+                <div class="col-md-6">
+                  <h1>es6</h1>
+                  <pre>
+                    <code>
+                      <p style="margin-left:-170px">
+                        var paragraph = `My name is Rupesh
+                            I am currently working at Rakuten
+                          My expertise are mobile application development and front end engineering.`
+                      </p>
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="rightFace step" data-x="725" data-y="90" data-z="-985" data-rotate-x="-30" data-rotate-y="45" data-rotate-z="0" data-scale="0.5">
+          <div class="container">
+          <h1>Class System</h1>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="paragraph">ES6 introduced the long awaited Class system. Now, you can say good bye to Constructor functions</p>
+              <h1>es5</h1>
+              <pre style="">
+                <code>
+                  <p style="margin-left:-170p">
+                    function Person() {
+                      //do coding stuff here
+                    }
+                    var person = new Person();
+                  </p>
+                </code>
+              </pre>
+
+            </div>
+          </div>
+        </div>
+
+        </div>
+        <div class="backRightFace step" data-x="725" data-y="-35" data-z="-1200" data-rotate-x="-30" data-rotate-y="135" data-rotate-z="0" data-scale="0.5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <h1>es6</h1>
+                <pre style="">
+                  <code>
+                    <p style="margin-left:-170px">
+                        class Person {
+                          constructor() {
+
+                          }
+                        }
+                        let person = new Person();
+                    </p>
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="backLeftFace step" data-x="475" data-y="-35" data-z="-1200" data-rotate-x="-30" data-rotate-y="225" data-rotate-z="0" data-scale="0.5">
+          <div class="container">
+            <h1>Arrow Functions</h1>
+
+            <div class="row">
+              <div class="col-md-6">
+                <p class="paragraph">Inspired from coffee script now es6 has coffee script like syntax for functions</p>
+                <h1>es5</h1>
+                <pre>
+                  <code>
+                    function(x,y) {
+                      return x+y
+                    }
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottomFace step" data-x="600" data-y="180" data-z="-1180" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="0.5">
+          <div class="container">
+            <h1>Arrow Functions</h1>
+            <div class="row">
+              <div class="col-md-6">
+                <h1>es6</h1>
+                <pre>
+                  <code>
+                    (x,y) => {
+                      return x+y
+                    };
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="cube">
+      <div class="topFace step" data-x="1200" data-y="-125" data-z="-1005" data-rotate-x="60" data-rotate-y="0" data-rotate-z="45" data-scale="0.5">
+        <div class="container">
+          <h1>Scoping</h1>
+
+          <div class="row">
+            <div class="col-md-6">
+              <p class="paragraph">Javasript now has block scoping(introduction of new keywords Let, const)</p>
+              <h1>es5</h1>
+              <pre>
+                <code>
+                  function() {
+                    var API_URL="www.google.com"
+                    if(true) {
+                      var a = 5;
+                    }
+                    API_URL = "facebook.com"
+                    console.log("es5",a);
+                  }
+                </code>
+              </pre>
+
+            </div>
+          </div>
+        </div>
+        <!-- <div class="container">
+          <p class="paragraph">No need of any external module loaders from now on</p>
+          <h1>Moduling</h1>
+          <div class="row">
+            <div class="col-md-6">
+              <h1>es5</h1>
+              <pre>
+                <code>
+                  module.export = 'hello';
+                  require('./hello');
+                </code>
+              </pre>
+
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="leftFace step" data-x="1075" data-y="90" data-z="-985" data-rotate-x="-30" data-rotate-y="-45" data-rotate-z="0" data-scale="0.5">
+        <div class="container">
+          <h1>Scoping</h1>
+          <div class="row">
+            <div class="col-md-6">
+              <h1>es6</h1>
+              <pre>
+                <code>
+                  function() {
+                    const URL = "www.google.com";
+                    if(true) {
+                      let a = 5;
+                    }
+                    console.log("es6",a);
+                  }
+                </code>
+              </pre>
+
+            </div>
+          </div>
+        </div>
+          <!-- <div class="container">
+            <h1>Moduling</h1>
+            <div class="row">
+              <div class="col-md-6">
+                <h1>es6</h1>
+                <pre>
+                  <code>
+                    export default hello;
+                    import hello from './hello';
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+          </div> -->
+      </div>
+      <div class="rightFace step" data-x="1325" data-y="90" data-z="-985" data-rotate-x="-30" data-rotate-y="45" data-rotate-z="0" data-scale="0.5">
+        <div class="container">
+          <h1>Destructuring</h1>
+
+          <div class="row">
+            <div class="col-md-6">
+              <p class="paragraph">Object destructuring can make your life easy</p>
+              <h1>es5</h1>
+              <pre>
+                <code>
+                  var person = {name: "Rupesh",age: 25,rank: 1};
+                  var name = person.name;
+                  var age = person.age;
+                </code>
+              </pre>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="backRightFace step" data-x="1325" data-y="-35" data-z="-1200" data-rotate-x="-30" data-rotate-y="135" data-rotate-z="0" data-scale="0.5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1>es6</h1>
+              <pre>
+                <code>
+                  let person = {name: "Rupesh",age: 25,rank: 1};
+                  let {name, age} = person;
+                </code>
+              </pre>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="backLeftFace step" data-x="1075" data-y="-35" data-z="-1200" data-rotate-x="-30" data-rotate-y="225" data-rotate-z="0" data-scale="0.5">
+        <!-- <div class="container">
+            <h1>Whats Next?</h1>
+        </div> -->
+      </div>
+      <div class="bottomFace step" data-x="1200" data-y="180" data-z="-1180" data-rotate-x="60" data-rotate-y="180" data-rotate-z="45" data-scale="0.5">
+        <!-- <div class="container">
+          <h1>Few featutes in ES7</h1>
+          <ul>
+            <li>Asyc/await</li>
+            <li>Decarators</li>
+          </ul>
+        </div> -->
+      </div>
+  </div>
+
+</div>
+
+<script src="javascripts/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
